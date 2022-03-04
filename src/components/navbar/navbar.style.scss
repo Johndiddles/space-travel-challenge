@@ -1,0 +1,25 @@
+.navbar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  padding: 2.5em 8em;
+  padding-right: 12em;
+  display: flex;
+  gap: 3em;
+
+  &::before {
+    content: "";
+    border-top: 1px solid rgba(151, 151, 151, 0.5);
+    position: absolute;
+    top: 50%;
+    left: -55%;
+    width: 60%;
+  }
+
+  &__link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+}
