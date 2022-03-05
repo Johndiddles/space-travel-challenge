@@ -2,8 +2,8 @@
   position: relative;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(15px);
-  padding: 2.5em 8em;
-  padding-right: 12em;
+  padding: 0 8em;
+  padding-right: 8em;
   display: flex;
   gap: 3em;
 
@@ -12,14 +12,29 @@
     border-top: 1px solid rgba(151, 151, 151, 0.5);
     position: absolute;
     top: 50%;
-    left: -55%;
-    width: 60%;
+    left: -54%;
+    width: 58%;
   }
 
   &__link {
     color: white;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 300;
     font-family: "Barlow Condensed", sans-serif;
+    padding: 2.5em 0;
+    letter-spacing: 0.2em;
+
+    &:hover {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.9);
+      transition: 0.5s;
+    }
+
+    span {
+      margin-right: 0.5em;
+      font-weight: 500;
+    }
+  }
+  .active {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.9);
   }
 }

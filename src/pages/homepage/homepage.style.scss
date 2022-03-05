@@ -6,7 +6,7 @@
   align-items: flex-end;
   background: url("../../assets/home/background-home-desktop.jpg");
   padding: 0 10em;
-  padding-bottom: 8em;
+  padding-bottom: 6em;
 
   .left {
     width: 50%;
@@ -17,20 +17,23 @@
       font-weight: 100;
       margin: 1em 0;
       font-family: "Barlow Condensed", sans-serif;
+      letter-spacing: 0.15em;
     }
 
     h1 {
       text-transform: uppercase;
-      font-size: 8em;
+      font-size: 8.5em;
       font-weight: 400;
       font-family: "Bellefair", sans-serif;
     }
     p {
-      font-size: 1.2em;
-      width: 48ch;
-      line-height: 1.7;
+      font-size: 1.1em;
+      width: 45ch;
+      line-height: 1.8;
       font-family: "Barlow", sans-serif;
       font-weight: 300;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 2em 0;
     }
   }
 
@@ -40,13 +43,13 @@
     justify-content: flex-end;
 
     .circle {
+      font-family: "Bellefair", sans-serif;
       background: white;
       border-radius: 100%;
       padding: 3.5em 2em;
       text-transform: uppercase;
       color: black;
       font-size: 2em;
-      font-weight: 100;
     }
   }
 }

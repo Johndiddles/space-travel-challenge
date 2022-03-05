@@ -1,0 +1,63 @@
+.single-planet-details {
+  width: 100%;
+  display: flex;
+  gap: 4em;
+
+  .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 5em;
+    // padding-bottom: 2em;
+
+    .planet__name {
+      font-size: 6em;
+      font-family: "Bellefair", sans-serif;
+      text-transform: uppercase;
+    }
+    .planet__description {
+      font-size: 1.1em;
+      font-weight: 300;
+      font-family: "Barlow", sans-serif;
+      line-height: 1.8;
+      //   letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 1em;
+      width: 42ch;
+    }
+    .planet__footer {
+      display: flex;
+      gap: 4em;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2em 0 0 0;
+
+      .footer {
+        &__title {
+          text-transform: uppercase;
+          font-size: 0.9em;
+          font-weight: 200;
+          letter-spacing: 0.15em;
+          color: rgba(255, 255, 255, 0.8);
+          font-family: "Barlow Condensed", sans-serif;
+        }
+        &__value {
+          text-transform: uppercase;
+          font-size: 1.75em;
+          font-weight: 400;
+          font-family: "Bellefair", sans-serif;
+          margin-top: 0.4em;
+        }
+      }
+    }
+  }
+}

@@ -1,23 +1,49 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navbar.style.scss";
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <Link to="/" className="navbar__link">
-        00 Home
-      </Link>
-      <Link to="/" className="navbar__link">
-        01 Destination
-      </Link>
-      <Link to="/" className="navbar__link">
-        {" "}
-        02 Crew
-      </Link>
-      <Link to="/" className="navbar__link">
-        {" "}
-        03 Technology
-      </Link>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <span>00</span> Home
+      </NavLink>
+
+      <NavLink
+        to="/destination/Moon"
+        className={
+          window.location.href.includes("destination")
+            ? "navbar__link active"
+            : "navbar__link"
+        }
+        // className={({ isActive }) =>
+        //   isActive ? "navbar__link active" : "navbar__link"
+        // }
+      >
+        <span>01</span> Destination
+      </NavLink>
+
+      <NavLink
+        to="/crew"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <span>02</span> Crew
+      </NavLink>
+
+      <NavLink
+        to="/technology"
+        className={({ isActive }) =>
+          isActive ? "navbar__link active" : "navbar__link"
+        }
+      >
+        <span>03</span> Technology
+      </NavLink>
     </div>
   );
 };
