@@ -16,7 +16,7 @@ const Navbar = () => {
       <NavLink
         to="/destination/Moon"
         className={
-          window.location.href.includes("destination")
+          window.location.href.includes("destination/")
             ? "navbar__link active"
             : "navbar__link"
         }
