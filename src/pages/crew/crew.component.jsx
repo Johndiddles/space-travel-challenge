@@ -28,25 +28,27 @@ const Crew = () => {
 
   return (
     <div className="crewPage">
-      <div className="crewMember">
-        <div className="left">
-          <h1 className="crewPage__header">
-            <span>02</span> meet the crew
-          </h1>
-          <div className="member">
-            <div className="member__role">{member.role}</div>
-            <div className="member__name">{member.name}</div>
-            <div className="member__bio">{member.bio}</div>
+      <div className="crew-member__wrapper">
+        <div className="crewMember">
+          <div className="left">
+            <h1 className="crewPage__header">
+              <span>02</span> meet the crew
+            </h1>
+            <div className="member">
+              <div className="member__role">{member.role}</div>
+              <div className="member__name">{member.name}</div>
+              <div className="member__bio">{member.bio}</div>
+            </div>
+            <div className="member__btns">
+              <button className="btn" id="0" onClick={memSwitch}></button>
+              <button className="btn" id="1" onClick={memSwitch}></button>
+              <button className="btn" id="2" onClick={memSwitch}></button>
+              <button className="btn" id="3" onClick={memSwitch}></button>
+            </div>
           </div>
-          <div className="member__btns">
-            <button className="btn" id="0" onClick={memSwitch}></button>
-            <button className="btn" id="1" onClick={memSwitch}></button>
-            <button className="btn" id="2" onClick={memSwitch}></button>
-            <button className="btn" id="3" onClick={memSwitch}></button>
+          <div className="right">
+            <img src={member.images.png} alt="" />
           </div>
-        </div>
-        <div className="right">
-          <img src={member.images.png} alt="" />
         </div>
       </div>
     </div>

@@ -1,10 +1,17 @@
 .planet {
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 3em;
+  }
   &__links {
     width: 100%;
-    padding-left: 60%;
     display: flex;
     gap: 2em;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
 
     .planet-link {
       background: transparent;

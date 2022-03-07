@@ -11,6 +11,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/technology/background-technology-tablet.jpg);
+    padding-left: 0;
+  }
+
   @media screen and (max-width: 480px) {
     background: url(../../assets/technology/background-technology-mobile.jpg);
   }
@@ -21,11 +26,23 @@
     flex-direction: column;
     width: 100%;
 
+    @media screen and(max-width: 768px) {
+      padding-top: 5em;
+      gap: 3em;
+      padding-bottom: 3em;
+    }
+
     &__header {
       font-family: "Barlow Condensed", sans-serif;
       width: 100%;
       text-align: left;
       text-transform: uppercase;
+
+      @media screen and(max-width: 768px) {
+        padding-left: 2em;
+        font-size: 0.8em;
+        letter-spacing: 0.2em;
+      }
 
       h1 {
         font-size: 1.8em;
@@ -46,11 +63,35 @@
       align-items: center;
       justify-content: space-between;
       gap: 4em;
+      width: 100%;
+
+      @media screen and(max-width: 768px) {
+        flex-direction: column-reverse;
+        gap: 2.5em;
+      }
+
+      .left {
+        display: flex;
+        gap: 4em;
+
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          text-align: center;
+          gap: 3em;
+        }
+      }
 
       &__id {
         display: flex;
         flex-direction: column;
         gap: 2em;
+
+        @media screen and(max-width: 768px) {
+          flex-direction: row;
+          gap: 1.2em;
+        }
 
         .btn {
           font-size: 2em;
@@ -68,6 +109,9 @@
             border: 0.05em solid rgba(255, 255, 255, 1);
             transition: 0.5s;
           }
+          @media screen and(max-width: 768px) {
+            font-size: 1.5em;
+          }
         }
 
         .active {
@@ -79,6 +123,11 @@
 
       &__details {
         // margin-left: -3em;
+        @media screen and(max-width: 768px) {
+          display: flex;
+          flex-direction: column;
+          gap: 0.7em;
+        }
         &--header {
           font-family: "Barlow Condensed", sans-serif;
           font-size: 1.15em;
@@ -93,15 +142,37 @@
           font-weight: 400;
           color: rgba(255, 255, 255, 1);
           text-transform: uppercase;
-          line-height: 1.8;
+          line-height: 1.6;
+
+          @media screen and(max-width: 768px) {
+            font-size: 2.5em;
+            line-height: 1.4;
+          }
         }
         &--description {
           font-family: "Barlow", sans-serif;
-          font-size: 1.2em;
+          font-size: 1.1em;
           font-weight: 300;
           color: rgba(208, 214, 249, 1);
           line-height: 1.8em;
           width: 43ch;
+
+          @media screen and(max-width: 768px) {
+            width: 48ch;
+            line-height: 1.6em;
+          }
+        }
+      }
+
+      &__image {
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        img {
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
         }
       }
     }

@@ -6,7 +6,13 @@
   color: white;
   font-weight: 600;
   position: fixed;
+  z-index: 2;
   margin: 2em 0;
   //   background: hsla(0, 0, 0, 0.6);
   padding-left: 4em;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0;
+    padding-left: 2.5em;
+  }
 }

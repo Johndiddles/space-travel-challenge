@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import data from "../../data";
 import "./planet-details.style.scss";
+import PlanetLinks from "./planet-links.component";
 
 const PlanetDetails = () => {
   const planets = data.destinations;
@@ -24,6 +25,7 @@ const PlanetDetails = () => {
           <img src={`${presentPlanet.images.png}`} alt={presentPlanet.name} />
         </div>
         <div className="right">
+          <PlanetLinks />
           <div className="planet__name">{presentPlanet.name}</div>
           <div className="planet__description">{presentPlanet.description}</div>
           <div className="planet__footer">

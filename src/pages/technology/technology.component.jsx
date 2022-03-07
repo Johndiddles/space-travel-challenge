@@ -34,26 +34,36 @@ const Technology = () => {
         </div>
 
         <div className="tech">
-          <div className="tech__id">
-            <button onClick={techSwitch} className="btn" id="0">
-              1
-            </button>
-            <button onClick={techSwitch} className="btn" id="1">
-              2
-            </button>
-            <button onClick={techSwitch} className="btn" id="2">
-              3
-            </button>
+          <div className="left">
+            <div className="tech__id">
+              <button onClick={techSwitch} className="btn" id="0">
+                1
+              </button>
+              <button onClick={techSwitch} className="btn" id="1">
+                2
+              </button>
+              <button onClick={techSwitch} className="btn" id="2">
+                3
+              </button>
+            </div>
+            <div className="tech__details">
+              <p className="tech__details--header">the terminology...</p>
+              <h1 className="tech__details--name">{singleTech.name}</h1>
+              <p className="tech__details--description">
+                {singleTech.description}
+              </p>
+            </div>
           </div>
-          <div className="tech__details">
-            <p className="tech__details--header">the terminology...</p>
-            <h1 className="tech__details--name">{singleTech.name}</h1>
-            <p className="tech__details--description">
-              {singleTech.description}
-            </p>
-          </div>
+
           <div className="tech__image">
-            <img src={singleTech.images.portrait} alt={singleTech.name} />
+            <img
+              src={
+                window.screen.width > 768
+                  ? singleTech.images.portrait
+                  : singleTech.images.landscape
+              }
+              alt={singleTech.name}
+            />
           </div>
         </div>
       </div>

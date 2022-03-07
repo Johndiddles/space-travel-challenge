@@ -3,12 +3,29 @@
   display: flex;
   gap: 4em;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
   .left {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      align-items: center;
+    }
+
+    img {
+      @media screen and (max-width: 768px) {
+        width: 300px;
+      }
+    }
   }
   .right {
     width: 50%;
@@ -19,10 +36,21 @@
     padding-left: 5em;
     // padding-bottom: 2em;
 
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      align-items: center;
+      padding-left: 0;
+      gap: 2em;
+    }
+
     .planet__name {
       font-size: 6em;
       font-family: "Bellefair", sans-serif;
       text-transform: uppercase;
+
+      @media screen and (max-width: 768px) {
+        font-size: 4.5em;
+      }
     }
     .planet__description {
       font-size: 1.1em;
@@ -33,6 +61,11 @@
       color: rgba(208, 214, 249, 1);
       margin-bottom: 1em;
       width: 42ch;
+
+      @media screen and (max-width: 768px) {
+        width: 62ch;
+        text-align: center;
+      }
     }
     .planet__footer {
       display: flex;
@@ -40,6 +73,12 @@
       width: 100%;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding: 2em 0 0 0;
+
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        gap: 6em;
+        text-align: center;
+      }
 
       .footer {
         &__title {

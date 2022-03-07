@@ -8,12 +8,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 5em 0 10em;
-  padding-bottom: 6em;
+  padding-bottom: 4em;
 
   @media screen and (max-width: 768px) {
     background: url(../../assets/home/background-home-tablet.jpg);
     flex-direction: column;
-    padding: 0 10em 0 10em;
+    justify-content: space-between;
+    padding: 12em 10em 0 10em;
     align-items: center;
   }
 
@@ -33,6 +34,10 @@
       font-family: "Barlow Condensed", sans-serif;
       letter-spacing: 0.15em;
       color: rgb(208, 214, 249);
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.2em;
+      }
     }
 
     h1 {
@@ -49,6 +54,12 @@
       font-weight: 300;
       color: rgb(208, 214, 249);
       margin: 2em 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1em;
+        width: 49ch;
+        margin: 1em 0;
+      }
     }
   }
 
@@ -71,6 +82,10 @@
       pointer-events: none;
       transition: 0.5;
 
+      @media screen and (max-width: 768px) {
+        margin-bottom: 0em;
+      }
+
       .circle {
         font-family: "Bellefair", sans-serif;
         background: white;
@@ -81,6 +96,10 @@
         font-size: 2em;
         pointer-events: auto;
         cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+          padding: 3em 1.5em;
+        }
       }
       &:hover {
         background: rgba(255, 255, 255, 0.09);

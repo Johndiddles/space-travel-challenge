@@ -1,103 +1,167 @@
 .crewPage {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  color: white;
   background: url(../../assets/crew/background-crew-desktop.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 5em 10em 0em 10em;
+
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/crew/background-crew-tablet.jpg);
+  }
 
   @media screen and (max-width: 480px) {
     background: url(../../assets/crew/background-crew-mobile.jpg);
   }
-  .crewMember {
-    display: flex;
-    flex-direction: row;
+
+  .crew-member__wrapper {
     width: 100%;
+    height: 100%;
+    background: rgba(208, 214, 249, 0.02);
+    backdrop-filter: blur(20px);
+    padding: 15em 10em 0em 10em;
 
-    .left {
-      width: 60%;
-      padding-bottom: 4em;
+    @media screen and (max-width: 768px) {
+      padding: 6em 2em 0em 2em;
+    }
+
+    @media screen and (max-width: 480px) {
+      padding: 6em 2em 0em 2em;
+    }
+    .crewMember {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
 
-      .crewPage__header {
-        text-transform: uppercase;
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 1.8em;
-        font-weight: 300;
-        letter-spacing: 0.1em;
-        color: rgba(255, 255, 255, 1);
-        width: 100%;
-        text-align: left;
-
-        span {
-          font-weight: 600;
-          color: rgba(255, 255, 255, 0.2);
-          margin-right: 0.5em;
-        }
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
       }
 
-      .member {
+      .left {
+        width: 60%;
+        padding-bottom: 4em;
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        justify-content: space-between;
 
-        &__role {
-          color: rgba(255, 255, 255, 0.5);
-          font-size: 2em;
-          font-family: "Bellefair", sans-serif;
-          text-transform: uppercase;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          gap: 2em;
+          align-items: center;
+          padding-bottom: 2em;
         }
 
-        &__name {
-          color: rgba(255, 255, 255, 1);
-          font-size: 3.5em;
-          font-family: "Bellefair", sans-serif;
+        .crewPage__header {
           text-transform: uppercase;
-        }
-
-        &__bio {
-          font-family: "Barlow", sans-serif;
-          font-size: 1.2em;
+          font-family: "Barlow Condensed", sans-serif;
+          font-size: 1.8em;
           font-weight: 300;
-          line-height: 1.8;
-          width: 43ch;
-          margin-top: 1em;
-          color: rgb(208, 214, 249);
+          letter-spacing: 0.1em;
+          color: rgba(255, 255, 255, 1);
+          width: 100%;
+          text-align: left;
+
+          @media screen and (max-width: 768px) {
+            margin-bottom: 1em;
+          }
+
+          span {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.2);
+            margin-right: 0.5em;
+          }
         }
 
-        &__btns {
+        .member {
           display: flex;
+          flex-direction: column;
           gap: 1em;
-          .btn {
-            width: 15px;
-            height: 15px;
-            border-radius: 100%;
-            background: rgba(255, 255, 255, 0.2);
-            border: 0px;
-            outline: none;
-            cursor: pointer;
 
-            &:hover {
-              background: rgba(255, 255, 255, 0.5);
+          @media screen and (max-width: 768px) {
+            text-align: center;
+            align-items: center;
+            gap: 0.5em;
+          }
+
+          &__role {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 2em;
+            font-family: "Bellefair", sans-serif;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 768px) {
+              font-size: 1.5em;
             }
           }
-          .active {
-            background: rgba(255, 255, 255, 1);
+
+          &__name {
+            color: rgba(255, 255, 255, 1);
+            font-size: 3.5em;
+            font-family: "Bellefair", sans-serif;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 768px) {
+              font-size: 2.5em;
+            }
+          }
+
+          &__bio {
+            font-family: "Barlow", sans-serif;
+            font-size: 1.2em;
+            font-weight: 300;
+            line-height: 1.8;
+            width: 43ch;
+            margin-top: 1em;
+            color: rgb(208, 214, 249);
+
+            @media screen and (max-width: 768px) {
+              margin: 0.5em auto;
+              width: 52ch;
+            }
+          }
+
+          &__btns {
+            display: flex;
+            gap: 1em;
+            .btn {
+              width: 15px;
+              height: 15px;
+              border-radius: 100%;
+              background: rgba(255, 255, 255, 0.2);
+              border: 0px;
+              outline: none;
+              cursor: pointer;
+
+              @media screen and (max-width: 768px) {
+                width: 10px;
+                height: 10px;
+              }
+
+              &:hover {
+                background: rgba(255, 255, 255, 0.5);
+              }
+            }
+            .active {
+              background: rgba(255, 255, 255, 1);
+            }
           }
         }
       }
-    }
-    .right {
-      width: 40%;
+      .right {
+        width: 40%;
 
-      img {
-        height: 75vh;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+        img {
+          height: 75vh;
+
+          @media screen and (max-width: 768px) {
+            height: 550px;
+          }
+        }
       }
     }
   }
