@@ -14,15 +14,15 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
+        id="destination_link"
         to="/destination/Moon"
-        className={
-          window.location.href.includes("destination/")
-            ? "navbar__link active"
-            : "navbar__link"
-        }
-        // className={({ isActive }) =>
-        //   isActive ? "navbar__link active" : "navbar__link"
-        // }
+        className={({ isActive }) => {
+          if (isActive || window.location.href.includes("destination")) {
+            return "navbar__link active";
+          } else {
+            return "navbar__link";
+          }
+        }}
       >
         <span>01</span> Destination
       </NavLink>

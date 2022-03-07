@@ -14,7 +14,9 @@ const Homepage = () => {
         </p>
       </div>
       <div className="right">
-        <div className="circle">explore</div>
+        <div className="circle__wrapper">
+          <div className="circle">explore</div>
+        </div>
       </div>
     </div>
   );

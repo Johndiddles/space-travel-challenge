@@ -5,12 +5,26 @@
   justify-content: center;
   align-items: flex-end;
   background: url("../../assets/home/background-home-desktop.jpg");
-  padding: 0 10em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 5em 0 10em;
   padding-bottom: 6em;
+
+  @media screen and (max-width: 768px) {
+    background: url(../../assets/home/background-home-tablet.jpg);
+    flex-direction: column;
+    padding: 0 10em 0 10em;
+    align-items: center;
+  }
 
   .left {
     width: 50%;
     text-align: left;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
 
     h5 {
       font-size: 1.7em;
@@ -18,6 +32,7 @@
       margin: 1em 0;
       font-family: "Barlow Condensed", sans-serif;
       letter-spacing: 0.15em;
+      color: rgb(208, 214, 249);
     }
 
     h1 {
@@ -32,7 +47,7 @@
       line-height: 1.8;
       font-family: "Barlow", sans-serif;
       font-weight: 300;
-      color: rgba(255, 255, 255, 0.9);
+      color: rgb(208, 214, 249);
       margin: 2em 0;
     }
   }
@@ -41,15 +56,36 @@
     width: 50%;
     display: flex;
     justify-content: flex-end;
+    // padding-right: 5em;
 
-    .circle {
-      font-family: "Bellefair", sans-serif;
-      background: white;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .circle__wrapper {
+      margin-bottom: -3em;
+      padding: 5em;
+      background: rgba(255, 255, 255, 0);
       border-radius: 100%;
-      padding: 3.5em 2em;
-      text-transform: uppercase;
-      color: black;
-      font-size: 2em;
+      pointer-events: none;
+      transition: 0.5;
+
+      .circle {
+        font-family: "Bellefair", sans-serif;
+        background: white;
+        border-radius: 100%;
+        padding: 3.5em 2em;
+        text-transform: uppercase;
+        color: black;
+        font-size: 2em;
+        pointer-events: auto;
+        cursor: pointer;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.09);
+        transition: 0.5s;
+      }
     }
   }
 }
