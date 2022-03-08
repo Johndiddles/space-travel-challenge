@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0 5em 0 10em;
-  padding-bottom: 4em;
+  padding-bottom: 6em;
 
   @media screen and (max-width: 1090px) {
     background: url(../../assets/home/background-home-tablet.jpg);
@@ -40,7 +40,7 @@
 
     h5 {
       font-size: 1.7em;
-      font-weight: 100;
+      font-weight: 300;
       margin: 1em 0;
       font-family: "Barlow Condensed", sans-serif;
       letter-spacing: 0.15em;
@@ -53,7 +53,7 @@
 
     h1 {
       text-transform: uppercase;
-      font-size: 8.5em;
+      font-size: 9em;
       font-weight: 400;
       font-family: "Bellefair", sans-serif;
 
@@ -63,10 +63,10 @@
     }
     p {
       font-size: 1.1em;
-      width: 45ch;
+      width: 43ch;
       line-height: 1.8;
       font-family: "Barlow", sans-serif;
-      font-weight: 300;
+      font-weight: 400;
       color: rgb(208, 214, 249);
       margin: 2em 0;
 
