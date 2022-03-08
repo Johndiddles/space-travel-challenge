@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./homepage.style.scss";
 
 const Homepage = () => {

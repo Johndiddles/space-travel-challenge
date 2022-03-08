@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import Navbar from "../navbar/navbar.component";
@@ -22,7 +23,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo">
-        <img src={logo} alt="logo" className="logo__img" />
+        <Link to="/">
+          <img src={logo} alt="logo" className="logo__img" />
+        </Link>
       </div>
       <div className="navMenu">
         {open ? (
