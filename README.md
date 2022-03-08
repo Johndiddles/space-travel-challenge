@@ -2,6 +2,10 @@
 
 This website was created with ReactJs and Sass
 
+## live link
+
+Hosted on [vercel](https://space-travel-chi.vercel.app/)
+
 ## Data
 
 data.json was renamed to data.js  
