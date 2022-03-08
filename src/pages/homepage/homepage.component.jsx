@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./homepage.style.scss";
 
 const Homepage = () => {
@@ -15,7 +16,14 @@ const Homepage = () => {
       </div>
       <div className="right">
         <div className="circle__wrapper">
-          <div className="circle">explore</div>
+          <button
+            onClick={() => {
+              window.location.href = "/destination/Moon";
+            }}
+            className="circle"
+          >
+            explore
+          </button>
         </div>
       </div>
     </div>
