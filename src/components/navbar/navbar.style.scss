@@ -2,9 +2,13 @@
   position: relative;
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(15px);
-  padding: 0 8em;
+  padding: 0 10em;
   display: flex;
-  gap: 2em;
+  gap: 3em;
+
+  @media screen and (max-width: 1360px) {
+    padding: 0 7em;
+  }
 
   @media screen and (max-width: 1090px) {
     padding: 0 3em;
@@ -26,8 +30,18 @@
     border-top: 1px solid rgba(151, 151, 151, 0.5);
     position: absolute;
     top: 50%;
-    left: -54%;
-    width: 58%;
+    left: -45%;
+    width: 50%;
+
+    @media screen and (max-width: 1360px) {
+      left: -35%;
+      width: 40%;
+    }
+
+    @media screen and (max-width: 1240px) {
+      left: -30%;
+      width: 35%;
+    }
 
     @media screen and (max-width: 1090px) {
       display: none;
