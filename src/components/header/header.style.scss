@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -11,8 +12,28 @@
   //   background: hsla(0, 0, 0, 0.6);
   padding-left: 4em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
     margin: 0 0;
     padding-left: 2.5em;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 1.5em;
+  }
+
+  .logo {
+    img {
+      @media screen and (max-width: 600px) {
+        width: 40px;
+      }
+    }
+  }
+  .navMenu {
+    display: none;
+    @media screen and (max-width: 600px) {
+      display: block;
+      font-size: 1.5em;
+      color: rgba(208, 214, 249, 1);
+      z-index: 2;
+    }
   }
 }

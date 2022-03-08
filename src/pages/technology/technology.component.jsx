@@ -58,7 +58,7 @@ const Technology = () => {
           <div className="tech__image">
             <img
               src={
-                window.screen.width > 768
+                window.screen.width > 1090
                   ? singleTech.images.portrait
                   : singleTech.images.landscape
               }

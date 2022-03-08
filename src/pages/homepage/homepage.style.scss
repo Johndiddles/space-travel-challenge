@@ -1,6 +1,7 @@
 .homepage {
   display: flex;
   width: 100%;
+  min-height: 100vh;
   height: 100%;
   justify-content: center;
   align-items: flex-end;
@@ -10,19 +11,29 @@
   padding: 0 5em 0 10em;
   padding-bottom: 4em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
     background: url(../../assets/home/background-home-tablet.jpg);
+    background-size: cover;
     flex-direction: column;
     justify-content: space-between;
     padding: 12em 10em 0 10em;
     align-items: center;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 6em 1.5em 0 1.5em;
+    background: url(../../assets/home/background-home-mobile.jpg);
+    overflow: scroll;
+    background-size: cover;
   }
 
   .left {
     width: 50%;
     text-align: left;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       width: 100%;
       text-align: center;
     }
@@ -35,7 +46,7 @@
       letter-spacing: 0.15em;
       color: rgb(208, 214, 249);
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         font-size: 1.2em;
       }
     }
@@ -45,6 +56,10 @@
       font-size: 8.5em;
       font-weight: 400;
       font-family: "Bellefair", sans-serif;
+
+      @media screen and (max-width: 600px) {
+        font-size: 5em;
+      }
     }
     p {
       font-size: 1.1em;
@@ -55,10 +70,15 @@
       color: rgb(208, 214, 249);
       margin: 2em 0;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         font-size: 1em;
         width: 49ch;
-        margin: 1em 0;
+        margin: 1em auto;
+      }
+
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        line-height: 1.6;
       }
     }
   }
@@ -69,7 +89,7 @@
     justify-content: flex-end;
     // padding-right: 5em;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       width: 100%;
       justify-content: center;
     }
@@ -82,8 +102,12 @@
       pointer-events: none;
       transition: 0.5;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         margin-bottom: 0em;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 3em;
       }
 
       .circle {
@@ -97,7 +121,12 @@
         pointer-events: auto;
         cursor: pointer;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1090px) {
+          padding: 3em 1.5em;
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 1.2em;
           padding: 3em 1.5em;
         }
       }

@@ -1,15 +1,19 @@
 .planet {
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
     padding: 0 3em;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 0 0 0;
   }
   &__links {
     width: 100%;
     display: flex;
     gap: 2em;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       justify-content: center;
     }
 

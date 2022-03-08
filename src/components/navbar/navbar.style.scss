@@ -6,8 +6,19 @@
   display: flex;
   gap: 2em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
     padding: 0 3em;
+  }
+
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0px;
+    padding: 0em;
+    flex-direction: column;
+    transition: 0.5s;
   }
 
   &::before {
@@ -18,7 +29,7 @@
     left: -54%;
     width: 58%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       display: none;
     }
   }
@@ -30,29 +41,54 @@
     font-family: "Barlow Condensed", sans-serif;
     padding: 2.5em 0;
     letter-spacing: 0.2em;
+    display: flex;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       font-size: 0.9em;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 1em;
+      padding: 0;
     }
 
     &:hover {
       border-bottom: 3px solid rgba(255, 255, 255, 0.5);
       transition: 0.5s;
+
+      @media screen and (max-width: 600px) {
+        border-bottom: 0px;
+      }
     }
 
     span {
       margin-right: 0.5em;
       font-weight: 500;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         display: none;
+      }
+      @media screen and (max-width: 600px) {
+        display: block;
       }
     }
   }
   .active {
     border-bottom: 3px solid rgba(255, 255, 255, 1);
+
+    @media screen and (max-width: 600px) {
+      border-bottom: 0px;
+    }
   }
   .inactive {
     border-bottom: 0px;
+  }
+}
+
+.activeNav {
+  @media screen and (max-width: 600px) {
+    width: 70vw;
+    padding: 8em 2em;
+    backdrop-filter: blur(40px);
   }
 }

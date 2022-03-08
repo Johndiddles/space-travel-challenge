@@ -1,6 +1,6 @@
 .technologyPage {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   padding-left: 10em;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,24 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1360px) {
+    padding-left: 5em;
+  }
+
+  @media screen and (max-width: 1090px) {
     background: url(../../assets/technology/background-technology-tablet.jpg);
     padding-left: 0;
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     background: url(../../assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 5em;
+    padding-bottom: 3em;
+    height: auto;
+    overflow-y: scroll;
+    justify-content: flex-start;
   }
 
   .technology {
@@ -26,10 +37,18 @@
     flex-direction: column;
     width: 100%;
 
-    @media screen and(max-width: 768px) {
-      padding-top: 5em;
+    @media screen and(max-width: 1090px) {
+      padding-top: 10em;
       gap: 3em;
       padding-bottom: 3em;
+    }
+    @media screen and(max-width: 768px) {
+      padding-top: 5em;
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 2em;
+      padding-top: 0;
     }
 
     &__header {
@@ -38,10 +57,15 @@
       text-align: left;
       text-transform: uppercase;
 
-      @media screen and(max-width: 768px) {
+      @media screen and(max-width: 1090px) {
         padding-left: 2em;
         font-size: 0.8em;
         letter-spacing: 0.2em;
+      }
+      @media screen and (max-width: 600px) {
+        text-align: center;
+        font-size: 0.6em;
+        padding-left: 0;
       }
 
       h1 {
@@ -65,21 +89,29 @@
       gap: 4em;
       width: 100%;
 
-      @media screen and(max-width: 768px) {
+      @media screen and(max-width: 1090px) {
         flex-direction: column-reverse;
         gap: 2.5em;
+      }
+
+      @media screen and(max-width: 600px) {
+        gap: 2em;
       }
 
       .left {
         display: flex;
         gap: 4em;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1090px) {
           flex-direction: column;
           width: 100%;
           align-items: center;
           text-align: center;
           gap: 3em;
+        }
+
+        @media screen and(max-width: 600px) {
+          gap: 1.5em;
         }
       }
 
@@ -88,7 +120,7 @@
         flex-direction: column;
         gap: 2em;
 
-        @media screen and(max-width: 768px) {
+        @media screen and(max-width: 1090px) {
           flex-direction: row;
           gap: 1.2em;
         }
@@ -109,8 +141,14 @@
             border: 0.05em solid rgba(255, 255, 255, 1);
             transition: 0.5s;
           }
-          @media screen and(max-width: 768px) {
+          @media screen and(max-width: 1090px) {
             font-size: 1.5em;
+          }
+
+          @media screen and(max-width: 600px) {
+            font-size: 1em;
+            padding: 0.65em 1.05em;
+            border: 0.1em solid rgba(255, 255, 255, 0.2);
           }
         }
 
@@ -123,10 +161,13 @@
 
       &__details {
         // margin-left: -3em;
-        @media screen and(max-width: 768px) {
+        @media screen and(max-width: 1090px) {
           display: flex;
           flex-direction: column;
           gap: 0.7em;
+        }
+        @media screen and(max-width: 600px) {
+          padding: 0 1.5em;
         }
         &--header {
           font-family: "Barlow Condensed", sans-serif;
@@ -135,6 +176,10 @@
           color: rgba(208, 214, 249, 1);
           text-transform: uppercase;
           letter-spacing: 0.1em;
+
+          @media screen and (max-width: 600px) {
+            font-size: 1.05em;
+          }
         }
         &--name {
           font-family: "Bellefair", sans-serif;
@@ -144,8 +189,12 @@
           text-transform: uppercase;
           line-height: 1.6;
 
-          @media screen and(max-width: 768px) {
+          @media screen and(max-width: 1090px) {
             font-size: 2.5em;
+            line-height: 1.4;
+          }
+          @media screen and(max-width: 600px) {
+            font-size: 1.6em;
             line-height: 1.4;
           }
         }
@@ -157,20 +206,24 @@
           line-height: 1.8em;
           width: 43ch;
 
-          @media screen and(max-width: 768px) {
+          @media screen and(max-width: 1090px) {
             width: 48ch;
             line-height: 1.6em;
+          }
+          @media screen and(max-width: 600px) {
+            width: 100%;
+            font-size: 0.95em;
           }
         }
       }
 
       &__image {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1090px) {
           width: 100%;
         }
 
         img {
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1090px) {
             width: 100%;
           }
         }

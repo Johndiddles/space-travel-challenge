@@ -3,10 +3,14 @@
   display: flex;
   gap: 4em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
     flex-direction: column;
     align-items: center;
     gap: 2em;
+  }
+
+  @media screen and (max-width: 600px) {
+    gap: 1.5em;
   }
 
   .left {
@@ -16,14 +20,17 @@
     justify-content: center;
     align-items: flex-end;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       width: 100%;
       align-items: center;
     }
 
     img {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         width: 300px;
+      }
+      @media screen and (max-width: 600px) {
+        width: 180px;
       }
     }
   }
@@ -36,11 +43,14 @@
     padding-left: 5em;
     // padding-bottom: 2em;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       width: 100%;
       align-items: center;
       padding-left: 0;
       gap: 2em;
+    }
+    @media screen and (max-width: 600px) {
+      gap: 1.5em;
     }
 
     .planet__name {
@@ -48,8 +58,14 @@
       font-family: "Bellefair", sans-serif;
       text-transform: uppercase;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         font-size: 4.5em;
+      }
+
+      @media screen and (max-width: 600px) {
+        font-size: 3.5em;
+        line-height: 0.8;
+        padding-bottom: 0;
       }
     }
     .planet__description {
@@ -62,9 +78,14 @@
       margin-bottom: 1em;
       width: 42ch;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         width: 62ch;
         text-align: center;
+      }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 1em;
       }
     }
     .planet__footer {
@@ -74,10 +95,15 @@
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding: 2em 0 0 0;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1090px) {
         justify-content: center;
         gap: 6em;
         text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+        gap: 2em;
       }
 
       .footer {

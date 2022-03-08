@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./navbar.style.scss";
 
-const Navbar = () => {
+const Navbar = (navMenuHandler) => {
   return (
-    <div className="navbar">
+    <div className="navbar" id="navbar">
       <NavLink
+        onClick={navMenuHandler}
         to="/"
         className={({ isActive }) =>
           isActive ? "navbar__link active" : "navbar__link"
@@ -16,6 +17,7 @@ const Navbar = () => {
       <NavLink
         id="destination_link"
         to="/destination/Moon"
+        onClick={navMenuHandler}
         className={({ isActive }) => {
           if (isActive || window.location.href.includes("destination")) {
             return "navbar__link active";
@@ -29,6 +31,7 @@ const Navbar = () => {
 
       <NavLink
         to="/crew"
+        onClick={navMenuHandler}
         className={({ isActive }) =>
           isActive ? "navbar__link active" : "navbar__link"
         }
@@ -38,6 +41,7 @@ const Navbar = () => {
 
       <NavLink
         to="/technology"
+        onClick={navMenuHandler}
         className={({ isActive }) =>
           isActive ? "navbar__link active" : "navbar__link"
         }

@@ -16,8 +16,6 @@ const PlanetDetails = () => {
     setPresentPlanet(thisPlanet[0]);
   }, [name, planets]);
 
-  console.log(presentPlanet);
-
   if (presentPlanet) {
     return (
       <div className="single-planet-details">

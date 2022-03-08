@@ -29,6 +29,9 @@ const Crew = () => {
   return (
     <div className="crewPage">
       <div className="crew-member__wrapper">
+        <h1 className="crewPage__header">
+          <span>02</span> meet the crew
+        </h1>
         <div className="crewMember">
           <div className="left">
             <h1 className="crewPage__header">

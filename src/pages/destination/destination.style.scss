@@ -1,4 +1,5 @@
 .destination {
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   background: url("../../assets/destination/background-destination-desktop.jpg");
@@ -10,9 +11,21 @@
   align-items: center;
   padding: 5em 10em 0 10em;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1090px) {
+    background: url(../../assets/destination/background-destination-tablet.jpg);
+    background-size: cover;
     padding: 6em 2em 3em 2em;
     gap: 2em;
+    height: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    background: url(../../assets/destination/background-destination-mobile.jpg);
+    background-size: cover;
+    overflow-y: scroll;
+    padding: 5em 1em 3em 1em;
+    gap: 1em;
+    height: auto;
   }
 
   &__header {
@@ -24,14 +37,23 @@
     text-transform: uppercase;
     padding: 1em 0;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1090px) {
       font-size: 1.4em;
+    }
+    @media screen and (max-width: 600px) {
+      text-align: center;
+      font-size: 1.1em;
+      padding: 0.5em 0 0.8em 0;
     }
 
     span {
       font-weight: 500;
       color: rgba(255, 255, 255, 0.5);
       margin-right: 1em;
+
+      @media screen and (max-width: 600px) {
+        margin-right: 0.5em;
+      }
     }
   }
 }
